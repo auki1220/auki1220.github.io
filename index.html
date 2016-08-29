@@ -6,25 +6,6 @@
 <img src="imgres.jpg" style="width:405px;height:228px;">
 <p>Chos<p>
 <p>HEHEHEHEHEH<p>
-var monthName = new Array('January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
-var hourap = new Array(12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
-function showTime(){
-    var dateObj = new Date();
-    var day = dateObj.getDate(), month = dateObj.getMonth(), year = dateObj.getFullYear(), hour = dateObj.getHours(), minutes = (dateObj.getMinutes()<=9?'0'+dateObj.getMinutes():dateObj.getMinutes());
-    var string  = monthName[month]+
-    ' '+day+
-    ', '+year+
-    '<br />'+hourap[hour]+
-    ':'+minutes+
-    ' '+(hour<=11?'am':'pm');
-    var timeDiv = document.getElementById('time');
-    if(timeDiv !== null) {
-        timeDiv.innerHTML = string;
-        timeDiv.setAttribute('datetime',year+'-'+(month+1<=9?'0'+(month+1):month+1)+'-'+day+' '+hour+':'+minutes);
-
-    };
-};
-setInterval(showTime,1000);
 <time id="time"></time>
 ￼
 </body>
